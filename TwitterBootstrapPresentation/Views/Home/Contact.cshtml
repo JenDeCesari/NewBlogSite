@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Contact Page";
+}
+
+
+<div>
+  <hgroup class="title">
+  <h2>@ViewBag.Title</h2>
+  <h3>@ViewBag.Message</h3>
+</hgroup>
+
+</div>
+ 
+
+
+<div>
+
+<section class="contact">
+    <header>
+        <h3>Phone</h3>
+    </header>
+    <p>
+        <span class="label">Chip:</span>
+        <span>919.451.2005</span>
+    </p> 
+</section>
+
+<section class="contact">
+    <header>
+        <h3>Email</h3>
+    </header>
+    <p>
+        <span class="label">Support:</span>
+        <span><a href="mailto:Support@example.com">Support@example.com</a></span>
+    </p>
+    <p>
+        <span class="label">Marketing:</span>
+        <span><a href="mailto:Marketing@example.com">Marketing@example.com</a></span>
+    </p>
+    <p>
+        <span class="label">General:</span>
+        <span><a href="mailto:General@example.com">General@example.com</a></span>
+    </p>
+</section>
+
+<section class="contact">
+    <header>
+        <h3>Address</h3>
+    </header>
+    <p>
+       Downtown<br />
+        Durham NC 27701
+    </p>
+</section>
+
+</div>
+
+
+<div >
+    <h3>About You</h3>
+</div>
+
+<form >
+
+ 
+          <div class="control-group">
+           
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="Name" placeholder ="Name">
+                         
+            </div>
+
+            <div class="controls">
+              
+              <input type="text" class="input-xlarge" id="Address" placeholder ="Address">
+                <br />
+              <input type="text" class="input-xlarge" id="Unit" placeholder ="Unit">
+              
+            </div>
+
+             <div class="controls">
+              
+              
+              <input type="text" class="input-small" id="City" placeholder ="City">
+               <select id="state" class="input-mini">
+                <option>St.</option>
+                <option>NC</option>
+                <option>SC</option>
+                <option>TN</option>
+                <option>VA</option>
+              </select>
+              <input type="text" class="input-mini" id="ZIP" placeholder ="Zip">
+            </div>
+
+        
+          <div class="">
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button class="btn">Cancel</button>
+          </div>
+        
+        </div>
+
+
+</form>
+
+

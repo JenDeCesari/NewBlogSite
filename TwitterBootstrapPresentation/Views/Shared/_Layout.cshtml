@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>@ViewBag.Title</title>
+
+@Styles.Render("~/TwitterBootstrapCSS")
+@Styles.Render("~/TwitterBootstrapCSSoverride")
+
+    <link rel="stylesheet" type="text/css" href="/docs/assets/js/google-code-prettify/prettify.css" />
+
+@Scripts.Render("~/jquery")
+
+    <script type="text/javascript" src="/docs/assets/js/google-code-prettify/prettify.js"></script>
+
+@Scripts.Render( "~/TwitterBootstrap")
+
+ <hr />
+
+        @if (IsSectionDefined("header"))
+        {@RenderSection("header")}
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class ="content">
+    <div class="container-fluid">
+
+        <div class="row-fluid">
+            @if (IsSectionDefined("featured"))
+            {
+                <div class="hero-unit">
+                    @RenderSection("featured", required: false)
+                </div>
+            }
+        </div>
+        <div class="row-fluid">
+     
+
+            @if (IsSectionDefined("sidebar"))
+            {
+                ViewBag.contentspan = "span9";
+
+                <div class="span3">
+                    @RenderSection("sidebar", required: false)
+                </div>
+                <!--/span2-->
+            }
+             
+            else { ViewBag.contentspan = "span9"; }
+
+            <div class= " @ViewBag.contentspan">
+                @RenderBody()
+            </div>
+
+@*             @if (IsSectionDefined("rightSidebar"))
+            {
+                ViewBag.contentspan = "span3";
+            
+                <div class="span3">
+                    @RenderSection("rightSidebar", required: false)
+                </div>
+            }*@
+
+        </div>
+
+
+        <!-- Fluid Row 1 -->
+
+    </div>
+    <!-- Main Container -->
+    </div>
+    <footer>
+        <hr />
+
+        @if (IsSectionDefined("footer"))
+        {@RenderSection("footer")}
+    </footer>
+    <script type="text/javascript" src="/docs/assets/js/application.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

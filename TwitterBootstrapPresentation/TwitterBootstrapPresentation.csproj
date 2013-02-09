@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{51E78A12-419A-4F5B-98D1-C7400333593B}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwitterBootstrapPresentation</RootNamespace>
+    <AssemblyName>TwitterBootstrapPresentation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20505.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20505.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20505.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20505.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20505.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20505.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0-beta2\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20505.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.0.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.0.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap-override.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\ajax-loader.png" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\icons-18-black.png" />
+    <Content Include="Content\images\icons-18-white.png" />
+    <Content Include="Content\images\icons-36-black.png" />
+    <Content Include="Content\images\icons-36-white.png" />
+    <Content Include="Content\jquery.mobile-1.1.0.css" />
+    <Content Include="Content\jquery.mobile-1.1.0.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.1.0.css" />
+    <Content Include="Content\jquery.mobile.structure-1.1.0.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.1.0.css" />
+    <Content Include="Content\jquery.mobile.theme-1.1.0.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="docs\assets\css\bootstrap-responsive.css" />
+    <Content Include="docs\assets\css\bootstrap.css" />
+    <Content Include="docs\assets\css\docs.css" />
+    <Content Include="docs\assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="docs\assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="docs\assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="docs\assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="docs\assets\ico\favicon.ico" />
+    <Content Include="docs\assets\img\bird.png" />
+    <Content Include="docs\assets\img\bootstrap-mdo-sfmoma-01.jpg" />
+    <Content Include="docs\assets\img\bootstrap-mdo-sfmoma-02.jpg" />
+    <Content Include="docs\assets\img\bootstrap-mdo-sfmoma-03.jpg" />
+    <Content Include="docs\assets\img\browsers.png" />
+    <Content Include="docs\assets\img\example-sites\fleetio.png" />
+    <Content Include="docs\assets\img\example-sites\jshint.png" />
+    <Content Include="docs\assets\img\example-sites\kippt.png" />
+    <Content Include="docs\assets\img\example-sites\soundready.png" />
+    <Content Include="docs\assets\img\examples\bootstrap-example-fluid.jpg" />
+    <Content Include="docs\assets\img\examples\bootstrap-example-hero.jpg" />
+    <Content Include="docs\assets\img\examples\bootstrap-example-starter.jpg" />
+    <Content Include="docs\assets\img\github-16px.png" />
+    <Content Include="docs\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="docs\assets\img\glyphicons-halflings.png" />
+    <Content Include="docs\assets\img\glyphicons\glyphicons_009_magic.png" />
+    <Content Include="docs\assets\img\glyphicons\glyphicons_042_group.png" />
+    <Content Include="docs\assets\img\glyphicons\glyphicons_079_podium.png" />
+    <Content Include="docs\assets\img\glyphicons\glyphicons_082_roundabout.png" />
+    <Content Include="docs\assets\img\glyphicons\glyphicons_155_show_thumbnails.png" />
+    <Content Include="docs\assets\img\glyphicons\glyphicons_163_iphone.png" />
+    <Content Include="docs\assets\img\glyphicons\glyphicons_214_resize_small.png" />
+    <Content Include="docs\assets\img\glyphicons\glyphicons_266_book_open.png" />
+    <Content Include="docs\assets\img\grid-18px-masked.png" />
+    <Content Include="docs\assets\img\icon-css3.png" />
+    <Content Include="docs\assets\img\icon-github.png" />
+    <Content Include="docs\assets\img\icon-html5.png" />
+    <Content Include="docs\assets\img\icon-twitter.png" />
+    <Content Include="docs\assets\img\less-logo-large.png" />
+    <Content Include="docs\assets\img\less-small.png" />
+    <Content Include="docs\assets\img\responsive-illustrations.png" />
+    <Content Include="docs\assets\js\application.js" />
+    <Content Include="docs\assets\js\bootstrap-alert.js" />
+    <Content Include="docs\assets\js\bootstrap-button.js" />
+    <Content Include="docs\assets\js\bootstrap-carousel.js" />
+    <Content Include="docs\assets\js\bootstrap-collapse.js" />
+    <Content Include="docs\assets\js\bootstrap-dropdown.js" />
+    <Content Include="docs\assets\js\bootstrap-modal.js" />
+    <Content Include="docs\assets\js\bootstrap-popover.js" />
+    <Content Include="docs\assets\js\bootstrap-scrollspy.js" />
+    <Content Include="docs\assets\js\bootstrap-tab.js" />
+    <Content Include="docs\assets\js\bootstrap-tooltip.js" />
+    <Content Include="docs\assets\js\bootstrap-transition.js" />
+    <Content Include="docs\assets\js\bootstrap-typeahead.js" />
+    <Content Include="docs\assets\js\bootstrap.js" />
+    <Content Include="docs\assets\js\bootstrap.min.js">
+      <DependentUpon>bootstrap.js</DependentUpon>
+    </Content>
+    <Content Include="docs\assets\js\google-code-prettify\prettify.css" />
+    <Content Include="docs\assets\js\google-code-prettify\prettify.js" />
+    <Content Include="docs\assets\js\jquery.js" />
+    <Content Include="docs\base-css.html" />
+    <Content Include="docs\build\index.js" />
+    <Content Include="docs\build\node_modules\hogan.js\lib\compiler.js" />
+    <Content Include="docs\build\node_modules\hogan.js\lib\hogan.js" />
+    <Content Include="docs\build\node_modules\hogan.js\lib\template.js" />
+    <Content Include="docs\build\node_modules\hogan.js\test\html\list.html" />
+    <Content Include="docs\build\node_modules\hogan.js\test\index.html" />
+    <Content Include="docs\build\node_modules\hogan.js\test\index.js" />
+    <Content Include="docs\build\node_modules\hogan.js\test\mustache.js" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec.js" />
+    <Content Include="docs\build\node_modules\hogan.js\tools\release.js" />
+    <Content Include="docs\build\node_modules\hogan.js\tools\web_templates.js" />
+    <Content Include="docs\build\node_modules\hogan.js\web\1.0.0\hogan.js" />
+    <Content Include="docs\build\node_modules\hogan.js\web\1.0.0\hogan.min.js">
+      <DependentUpon>hogan.js</DependentUpon>
+    </Content>
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.0\hogan.js" />
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.0\hogan.min.js">
+      <DependentUpon>hogan.js</DependentUpon>
+    </Content>
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.3\hogan.js" />
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.3\hogan.min.js">
+      <DependentUpon>hogan.js</DependentUpon>
+    </Content>
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.amd.js" />
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.common.js" />
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.js" />
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.min.amd.js" />
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.min.common.js" />
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.min.js">
+      <DependentUpon>hogan-1.0.5.js</DependentUpon>
+    </Content>
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.min.mustache.js" />
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.mustache.js" />
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.5\template-1.0.5.js" />
+    <Content Include="docs\build\node_modules\hogan.js\web\builds\1.0.5\template-1.0.5.min.js">
+      <DependentUpon>template-1.0.5.js</DependentUpon>
+    </Content>
+    <Content Include="docs\build\node_modules\hogan.js\web\favicon.ico" />
+    <Content Include="docs\build\node_modules\hogan.js\web\images\logo.png" />
+    <Content Include="docs\build\node_modules\hogan.js\web\images\noise.png" />
+    <Content Include="docs\build\node_modules\hogan.js\web\images\small-hogan-icon.png" />
+    <Content Include="docs\build\node_modules\hogan.js\web\images\stripes.png" />
+    <Content Include="docs\build\node_modules\hogan.js\web\stylesheets\layout.css" />
+    <Content Include="docs\build\node_modules\hogan.js\web\stylesheets\skeleton.css" />
+    <Content Include="docs\components.html" />
+    <Content Include="docs\download.html" />
+    <Content Include="docs\examples.html" />
+    <Content Include="docs\examples\fluid.html" />
+    <Content Include="docs\examples\hero.html" />
+    <Content Include="docs\examples\starter-template.html" />
+    <Content Include="docs\index.html" />
+    <Content Include="docs\javascript.html" />
+    <Content Include="docs\less.html" />
+    <Content Include="docs\scaffolding.html" />
+    <Content Include="docs\upgrading.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="docs\assets\js\README.md" />
+    <Content Include="docs\build\node_modules\.bin\hulk" />
+    <Content Include="docs\build\node_modules\hogan.js\.gitmodules" />
+    <Content Include="docs\build\node_modules\hogan.js\.git_ignore" />
+    <Content Include="docs\build\node_modules\hogan.js\bin\hulk" />
+    <Content Include="docs\build\node_modules\hogan.js\LICENSE" />
+    <Content Include="docs\build\node_modules\hogan.js\Makefile" />
+    <Content Include="docs\build\node_modules\hogan.js\package.json" />
+    <Content Include="docs\build\node_modules\hogan.js\README.md" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\Changes" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\Rakefile" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\README.md" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\comments.json" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\comments.yml" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\delimiters.json" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\delimiters.yml" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\interpolation.json" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\interpolation.yml" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\inverted.json" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\inverted.yml" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\partials.json" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\partials.yml" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\sections.json" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\sections.yml" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\~lambdas.json" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\specs\~lambdas.yml" />
+    <Content Include="docs\build\node_modules\hogan.js\test\spec\TESTING.md" />
+    <Content Include="docs\build\node_modules\hogan.js\test\templates\list.mustache" />
+    <Content Include="docs\build\node_modules\hogan.js\web\index.html.mustache" />
+    <Content Include="docs\build\node_modules\hogan.js\wrappers\amd.js.mustache" />
+    <Content Include="docs\build\node_modules\hogan.js\wrappers\common.js.mustache" />
+    <Content Include="docs\build\node_modules\hogan.js\wrappers\js.mustache" />
+    <Content Include="docs\build\node_modules\hogan.js\wrappers\mustache.js.mustache" />
+    <Content Include="docs\build\package.json" />
+    <Content Include="docs\templates\layout.mustache" />
+    <Content Include="docs\templates\pages\base-css.mustache" />
+    <Content Include="docs\templates\pages\components.mustache" />
+    <Content Include="docs\templates\pages\download.mustache" />
+    <Content Include="docs\templates\pages\examples.mustache" />
+    <Content Include="docs\templates\pages\index.mustache" />
+    <Content Include="docs\templates\pages\javascript.mustache" />
+    <Content Include="docs\templates\pages\less.mustache" />
+    <Content Include="docs\templates\pages\scaffolding.mustache" />
+    <Content Include="docs\templates\pages\upgrading.mustache" />
+    <None Include="Scripts\jquery-1.7.2.intellisense.js">
+      <DependentUpon>jquery-1.7.2.js</DependentUpon>
+    </None>
+    <Content Include="Images\EmailSphere.png" />
+    <Content Include="Images\TwitterSphere.png" />
+    <Content Include="Images\WordPressSphere.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js">
+      <DependentUpon>bootstrap.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-1.7.2.js" />
+    <Content Include="Scripts\jquery-1.7.2.min.js">
+      <DependentUpon>jquery-1.7.2.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.mobile-1.1.0.js" />
+    <Content Include="Scripts\jquery.mobile-1.1.0.min.js">
+      <DependentUpon>jquery.mobile-1.1.0.js</DependentUpon>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\aspNetHome.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\findHosting.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\NuGetGallery.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\twitter.png" />
+    <Content Include="Images\windowsLive.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\_DefaultMenu.cshtml" />
+    <Content Include="Views\Home\Grid.cshtml" />
+    <Content Include="Views\Home\RUC.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7414</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:47364/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
