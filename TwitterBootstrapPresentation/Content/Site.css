@@ -120,7 +120,7 @@ footer {
     clear: both;
     background-color: #e2e2e2;
     font-size: .8em;
-    height: 100px;
+    height: 10px;
 }
 
 
@@ -209,7 +209,7 @@ ul#menu {
 }
 
     .featured .content-wrapper {
-        background-color: #7ac0da;
+        background-color: #e80c4d;
         background-image: -ms-linear-gradient(left, #FF80FF 0%, #FF80FF 100%);
         background-image: -o-linear-gradient(left, #FF80FF 0%, #FF80FF 100%);
         background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FF80FF), color-stop(1, #FF80FF));
