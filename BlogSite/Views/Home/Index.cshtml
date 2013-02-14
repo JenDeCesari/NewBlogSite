@@ -9,7 +9,7 @@
                 <h2>@ViewBag.Title</h2>
                 <h3>@ViewBag.Message</h3>
             </hgroup>
-          
+          <hr />
         </div>
     </section>
 }
@@ -17,29 +17,106 @@
 @section sidebar{
     @*<h3 class="alert ">Jennifer DeCesari</h3>*@
 
-         <h5 class="muted" >Contact Info</h5>
+         <h5 class="muted" >Contact Info</h5><p></p>
       
-         <div style="white-space: nowrap"><a href="mailto://jenniferdecesari@gmail.com" ><img src="~/Images/EmailSphere.png" />&nbsp;jenniferdecesari@@gmail.com</a></div>  
-         <div><a href="https://twitter.com/JenDeCesari" target="_new"><img src="~/Images/TwitterSphere.png" />&nbsp;@@JenDeCesari</a> </div> 
-
-    <h3>Further navigation will go here</h3>
+    <div style="white-space: nowrap"><a href="mailto://jenniferdecesari@gmail.com" ><img src="~/Images/EmailIcon.png" alt="Email" />&nbsp;jenniferdecesari@@gmail.com</a></div>  
+    <div><a href="https://twitter.com/JenDeCesari" target="_new"><img src="~/Images/twitter.png" alt="Twitter" />&nbsp;@@JenDeCesari</a> </div> 
+    <hr/>
+    <p></p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Resume", "Resume", "Home")</li>
+    </ul>
             
 }
+<h3>February 13th, 2013</h3>
+<p>
+    <h5>Learning LINQ and the IEnumerable Interface</h5><p></p>
+    <p>
+        So I'm a rusty dinosaur... there I'll admit it.  I last used the 2.0 version of the .net framework and the company I worked for
+        really wasn't equipped to handle a total newb like me.  I started with them as a college intern and stayed on after graduation for 
+        a total of 5 years.  It was a 'throw you in the deepend and see what happens' type of environment, which isn't bad at all... it's
+        just that there needs to be safety nets at various points and I definitely didn't have any there because it was a small company and
+        everyone was busy doing there own things.  I should have moved on quickly but got comfortable and the thought of going to another
+        company that would, not doubt, include a long commute was not one I wanted to consider at that time, especially after I had my 
+        daughter.
+    </p>
+    
+    <p>
+        Now that I'm working at Parata I realize what I was missing and just how much I love it here.  It's inclusive and supportive and 
+        they have a plan for folks like me.  I'm very much a college graduate level despite having 5 years of experience (also despite my 
+        4 year hiatus as a stay at home mom), because those 5 years of experience weren't structured to let me grow as a developer and I 
+        should have done more to further my education even beyond the work I was doing.  But that's all in the past now.  
+    </p> 
+    
+    <p>
+        Now I'm concentrating on everything that I need to catch up on - today that means LINQ.  I'm working on a bug at work that seems 
+        to be a read error from a database table - simple enough.  Until I realized that all the database calls, storage and useage is 
+        done in LINQ, which I have never used.  So I started by reading 
+        <a href="http://www.amazon.com/LINQ-Objects-Using-4-0-Addison-Wesley/dp/0321637003/ref=sr_1_1?s=books&ie=UTF8&qid=1360700810&sr=1-1&keywords=linq+to+objects+using+c+4.0" target="_new">
+            this book
+        </a> 
+        in my Safari Books Online library.  Chapter 2 started talking about extension methods and I realized I'm missing something. I know 
+        the basics of LINQ but needed some work understanding more, especially the IEnumerable Interface and extension methods.  This stuff 
+        is so cool!  
+    </p>
+    
+    <p>
+        I came across a great article on code project <a href="http://www.codeproject.com/Articles/474678/A-Beginners-Tutorial-on-Implementing-IEnumerable-I" target="_new">
+                                                          here
+                                                      </a>.
+        He was great to even include a solution file so we can look at the code and walk through it easily.
+        Then I came across <a href="http://blogs.msdn.com/b/charlie/archive/2008/04/28/linqfarm-understanding-ienumerable-t-sets-and-sequences.aspx" target="_new">
+                               this blog post
+                           </a> explaining IEnumerator&ltT&gt in great detail.  I love how the programming community shares so much!
+    </p>
+    
+    <p>
+        So I thought I would sum up what I gathered from this article and what <em><strong>I</strong></em> understand the IEnumerator Interface to be and do.
+    </p>
+    
+    <p>
+        IEnumerator:
+        <ol>
+            <li>Allows you to easily iterator though collections, lists or arrays</li>
+            <li>Uses the GetEnumerator method which returns an enumerator that iterates through a collection.</li>
+            <li>LINQ extension methods add additional functionality.</li>
+        </ol>
+    </p>
+    
+    <p>
+        IEnumerator&ltT&gt:
+        <ol>
+            <li>A key part of LINQ!</li>
+            <li>All the collections in System.Collections.Generic support IEnumerator&ltT&gt which makes them possible to query using
+                LINQ.
+            </li>
+            <li>LINQ queries take and return the same type enables a feature called composability.  You can usually pass the result 
+                of one LINQ query to another LINQ query - this allows you to compose a series of queries that work together to achieve 
+                a single end.  How COOL!!! This totally eliminates 20 different T-SQL statements like I'm used to.
+            </li>
+        </ol>
+    </p>
+</p>
+<hr/>
 
 <h3>February 8th, 2013</h3><p></p>
 
 <h5>Welcome!</h5><p></p>
 So this is the first 'blog' post.  I should write something interesting or intriguing, right?  I went to work today, I came home and am 
 now sitting like a bump on a log on my couch trying to naviagate MVC, CSS, JavaScript and ASP.NET to create a blog site... for no other 
-reason than to say that I did.<p></p>
+reason than to say that I did. I figure creating this blog site is a great way to learn all the web technologies that I haven't been
+exposed to.<p></p>
 
-I'm Jen.  I'm a 30-something suburban working Mom.  I wasn't always a working mom though. My oldest daughter (OD) was born in 2006 
-followed 2.5 years later by my currently youngest daughter (CYD) in 2008 (I say currently because I hope she's not always the youngest 
+I'm Jen.  I'm a 30-something suburban working Mom.  I wasn't always a working mom though. My oldest daughter was born in 2006 
+followed 2.5 years later by my currently youngest daughter in 2008 (I say currently because I hope she's not always the youngest 
 child *hint hint husband-o-mine*).  My first was born 3 months early and she was very sickly her first year and it killed me to be working
 and not home with her, so when #2 showed up I knew I'd be staying home with her.  Fast forward 4 years...<p></p>
 
 A bad economy forced us to move 900 miles away in order for me to find work and reenter the workforce.  Hubby works as a LAMP stack 
 developer and continues to work for the same company for 5 years now.  But me, finding work as a WinForms .NET developer was not going
-to happen n an area as hard hit as we left.  So Raleigh, North Carolina we go!   After a disasterous 10 weeks working at a governement 
-agency I got my current position at Parata Systems in Durham.  Back to doing WinForms development and working with an awesome team.  
-I love going to work every day :)<p></p>
+to happen in an area as hard hit by the recession as we left.  So Raleigh, North Carolina we go!   After a disasterous 10 weeks working at 
+a governement agency I got my current position at Parata Systems in Durham.  Back to doing WinForms development and working with an 
+awesome team.  I love going to work every day :)<p></p>

@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Resume";
+}
+@section featured {
+    <section class="featured">
+        <div>
+            <hgroup class="title">
+                <h2>@ViewBag.Title</h2>
+                <h3>@ViewBag.Message</h3>
+            </hgroup>
+
+        </div>
+    </section>
+}
+ 
+@section sidebar{
+    @*<h3 class="alert ">Jennifer DeCesari</h3>*@
+
+         <h5 class="muted" >Contact Info</h5><p></p>
+      
+    <div style="white-space: nowrap"><a href="mailto://jenniferdecesari@gmail.com" ><img src="~/Images/EmailIcon.png" alt="Email" />&nbsp;jenniferdecesari@@gmail.com</a></div>  
+    <div><a href="https://twitter.com/JenDeCesari" target="_new"><img src="~/Images/twitter.png" alt="Twitter" />&nbsp;@@JenDeCesari</a> </div> 
+    <hr/>
+    <p></p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Resume", "Resume", "Home")</li>
+    </ul>
+            
+}
+
+
+    <div class="content">
+        <div class="container-fluid">
+            
+            <div class="row-fluid">
+                <h2>Jennifer DeCesari</h2><br/>
+                <strong>(919)886-6293<br/></strong>
+                <a href="mailto://jenniferdecesari@gmail.com">JenniferDeCesari@gmail.com</a><p></p><hr/>
+               @* <p>
+                    <strong>Objective:</strong><br/>
+                    Experienced and qualified software professional seeking to return to the work force with an entry level position in
+                    the software development field as a C# programmer.
+                </p>*@
+                <p>
+                    <strong>Summary of Qualification:</strong><br/>
+                    Hard working, motivated and goal-oriented professional: Excellent experience with C#.net, keen working knowledge of 
+                    database programming as well as project management experience.
+                </p>
+                
+                <p></p>
+                <strong>Experience includes:</strong><br />
+                <ul>
+                    <li>•	C#, VB.NET, LINQ and T-SQL programming</li>
+                    <li>•	Very Strong Written and Oral Communications Skills</li>
+                    <li>•	Leadership Skills</li>
+                    <li>•	Excellent Interpersonal Skills</li>
+                    <li>•	Very Strong Presentation and Organization Skills</li>
+                    <li>•	Heavily involved with Triangle Area .NET users group</li>
+                </ul>
+                <p></p>
+                <strong>Work experience:</strong>
+                <p></p>
+                <strong>Parata Systems</strong><p></p>                                          2013 to present<p></p>
+                <strong>Software Engineer on Pharmacy 2000 team</strong>
+                <ul>
+                    <li>Pharmacy 2000 bug fixes and updates</li>
+                    <li>Travelling for face to face customer interaction and system integration</li>
+                    <li>Refactoring code base to include LINQ queries</li>
+                </ul>
+                <p></p>
+
+                <strong>North Carolina Board of Nursing</strong><p></p>							2012 to 2013<p></p>
+                <strong>ASP.NET Developer & Web Manager</strong>
+                <ul>
+                    <li>•	Coordinate update to existing external website NCBON.com built on MVC 4 and SQL Server</li>
+                    <li>•	Manage existing external site and add functionality & updates as requested using classic ASP and VB.NET.</li>
+                    <li>•	Taught staff how to use web site update features.</li>
+                    <li>•	Manage and update existing Sharepoint services.</li>
+                    <li>•	Planned new internal web site which would cut paperwork and increase staff productivity by 20%.</li>
+                </ul>
+                <p></p>
+
+                <strong>Tidgewell Associates, Inc.</strong><p></p> 								2003 to 2008<p></p>
+                <strong>C# Programmer</strong>
+                <ul>
+                    <li>•	Built various subsystems related to a proprietary .NET-based healthcare information system, BHIS.</li>
+                    <li>•	Developed numerous reusable widgets including a generic image viewer library, an enhanced masked text editing box and an accordion widget.</li>
+                    <li>•	Utilized both C# and VB.Net in a windows forms development environment.</li>
+                    <li>•	Built numerous complex data importers using C# and T-SQL according to HIPAA standards.</li>
+                    <li>•	Create development and release documentation.</li>
+                    <li>•	Execute testing and debugging in a combination agile & feature driven development environment.</li>
+                    <li>•	Interface directly with clients to address concerns and problems.</li>
+                    <li>•	Maintenance of project timelines in MS Project for full life cycle development.</li>
+                </ul>
+                <p></p>
+                <strong>Technical Knowledge:</strong><p></p>
+                Programming Languages/Frameworks: C#, Java, VB.NET, ASP.NET, MVC 4, Javascript, LINQ, T-SQL<p></p>
+                Database Applications: MS Access, SQL Server 2008, MySQL <p></p>
+                Operating Systems: All versions of Windows<p></p>
+                Other:  Team Foundation Server, MS Office, MS Project, MS Sharepoint, Ektron CMS, Wordpress, Adobe Photoshop CS5<p></p>
+
+                <strong>Educational Qualification:</strong><p></p>
+                AS Degree-Computer Science from Community College of Rhode Island – 2004<p></p>
+
+            </div>
+        </div>
+    
+    </div>
+</body>
+</html>

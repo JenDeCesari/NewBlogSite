@@ -316,6 +316,7 @@
     <None Include="Scripts\jquery-1.7.2.intellisense.js">
       <DependentUpon>jquery-1.7.2.js</DependentUpon>
     </None>
+    <Content Include="Images\EmailIcon.png" />
     <Content Include="Images\EmailSphere.png" />
     <Content Include="Images\TwitterSphere.png" />
     <Content Include="Images\WordPressSphere.png" />
@@ -366,8 +367,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_DefaultMenu.cshtml" />
-    <Content Include="Views\Home\Grid.cshtml" />
-    <Content Include="Views\Home\RUC.cshtml" />
+    <Content Include="Views\Home\Resume.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

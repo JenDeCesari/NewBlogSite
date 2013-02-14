@@ -2,55 +2,47 @@
     ViewBag.Title = "Contact Page";
 }
 
+@section featured {
+    <section class="featured">
+        <div>
+            <hgroup class="title">
+                <h2>@ViewBag.Title</h2>
+                <h3>@ViewBag.Message</h3>
+            </hgroup>
 
-<div>
-  <hgroup class="title">
-  <h2>@ViewBag.Title</h2>
-  <h3>@ViewBag.Message</h3>
-</hgroup>
-
-</div>
+        </div>
+    </section>
+}
  
+@section sidebar{
+    @*<h3 class="alert ">Jennifer DeCesari</h3>*@
 
+         <h5 class="muted" >Contact Info</h5><p></p>
+      
+    <div style="white-space: nowrap"><a href="mailto://jenniferdecesari@gmail.com" ><img src="~/Images/EmailIcon.png" alt="Email" />&nbsp;jenniferdecesari@@gmail.com</a></div>  
+    <div><a href="https://twitter.com/JenDeCesari" target="_new"><img src="~/Images/twitter.png" alt="Twitter" />&nbsp;@@JenDeCesari</a> </div> 
+    <hr/>
+    <p></p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Resume", "Resume", "Home")</li>
+    </ul>
+            
+}
 
 <div>
 
 <section class="contact">
     <header>
-        <h3>Phone</h3>
+        <h3>Phone & E-mail</h3>
     </header>
     <p>
-        <span class="label">Chip:</span>
-        <span>919.451.2005</span>
+        @*<span class="label"></span>*@
+        <span>919.886.6293</span><p></p>
+        <span><a href="mailto://jenniferdecesari@gmail.com">JenniferDeCesari@gmail.com</a></span>
     </p> 
-</section>
-
-<section class="contact">
-    <header>
-        <h3>Email</h3>
-    </header>
-    <p>
-        <span class="label">Support:</span>
-        <span><a href="mailto:Support@example.com">Support@example.com</a></span>
-    </p>
-    <p>
-        <span class="label">Marketing:</span>
-        <span><a href="mailto:Marketing@example.com">Marketing@example.com</a></span>
-    </p>
-    <p>
-        <span class="label">General:</span>
-        <span><a href="mailto:General@example.com">General@example.com</a></span>
-    </p>
-</section>
-
-<section class="contact">
-    <header>
-        <h3>Address</h3>
-    </header>
-    <p>
-       Downtown<br />
-        Durham NC 27701
-    </p>
 </section>
 
 </div>
@@ -61,44 +53,41 @@
 </div>
 
 <form >
-
- 
-          <div class="control-group">
+    <div class="control-group">
            
-            <div class="controls">
-              <input type="text" class="input-xlarge" id="Name" placeholder ="Name">
+              <div class="controls">
+                  <input type="text" class="input-xlarge" id="Name" placeholder ="Name">
                          
-            </div>
+              </div>
 
-            <div class="controls">
+              <div class="controls">
               
-              <input type="text" class="input-xlarge" id="Address" placeholder ="Address">
-                <br />
-              <input type="text" class="input-xlarge" id="Unit" placeholder ="Unit">
+                  <input type="text" class="input-xlarge" id="Address" placeholder ="Address">
+                  <br />
+                  <input type="text" class="input-xlarge" id="Unit" placeholder ="Unit">
               
-            </div>
+              </div>
 
-             <div class="controls">
+              <div class="controls">
               
               
-              <input type="text" class="input-small" id="City" placeholder ="City">
-               <select id="state" class="input-mini">
-                <option>St.</option>
-                <option>NC</option>
-                <option>SC</option>
-                <option>TN</option>
-                <option>VA</option>
-              </select>
-              <input type="text" class="input-mini" id="ZIP" placeholder ="Zip">
-            </div>
-
+                  <input type="text" class="input-small" id="City" placeholder ="City">
+                  <select id="state" class="input-mini">
+                      <option>NC</option>
+                  </select>
+                  <input type="text" class="input-mini" id="ZIP" placeholder ="Zip">
+              </div>
+              <div>
+                  <textarea style="height: 200px" class="input-xlarge" id="message" placeholder="Message"></textarea>
+                  <br/>
+              </div>
         
-          <div class="">
-            <button type="submit" class="btn btn-primary">Save changes</button>
-            <button class="btn">Cancel</button>
+              <div class="">
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                  <button class="btn">Cancel</button>
+              </div>
+        
           </div>
-        
-        </div>
 
 
 </form>

@@ -21,7 +21,7 @@
  }
 
 .rightSidebar-nav {
-    padding: 9px, 0;
+    padding: 9px 0;
 }
               
               
@@ -142,16 +142,16 @@ aside {
 
  .hero-unit {
     
-    background-color: #d42b98;
+    background-color: #ffffff;
     padding: 30px;
-    color: white;
+    color: black ;
  }
  
 .hero-unit  a {
   font-size: inherit;
   font-weight: 200;
   line-height: 27px;
-  color: white;
+  color: black;
   text-decoration:none;
 }
 

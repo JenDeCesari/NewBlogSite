@@ -9,20 +9,18 @@ namespace TwitterBootstrapPresentation.Controllers
             return View();
         }
 
-        public ActionResult Grid()
-        {
-            return View();
-        }
-
-        public ActionResult RUC()
-        {
-            return View();
-        }
-
         public ActionResult Contact()
         {
-           
+           return View();
+        }
 
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Resume()
+        {
             return View();
         }
     }

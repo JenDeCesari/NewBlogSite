@@ -205,11 +205,11 @@ ul#menu {
 ----------------------------------------------------------*/
 /* featured */
 .featured {
-    background-color: #FF80FF;
+    background-color: #ffffff;
 }
 
     .featured .content-wrapper {
-        background-color: #e80c4d;
+        background-color: #ffffff;
         background-image: -ms-linear-gradient(left, #FF80FF 0%, #FF80FF 100%);
         background-image: -o-linear-gradient(left, #FF80FF 0%, #FF80FF 100%);
         background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FF80FF), color-stop(1, #FF80FF));
@@ -220,10 +220,33 @@ ul#menu {
     }
 
         .featured hgroup.title h1, .featured hgroup.title h2 {
-            color: #FF80FF;
+            color: black;
         }
 
         .featured p {
+            font-size: 1.1em;
+        }
+
+.secondary {
+    background-color: #ffffff;
+}
+
+    .secondary .content-wrapper {
+        background-color: #ffffff;
+        background-image: -ms-linear-gradient(left, #FF80FF 0%, #FF80FF 100%);
+        background-image: -o-linear-gradient(left, #FF80FF 0%, #FF80FF 100%);
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FF80FF), color-stop(1, #FF80FF));
+        background-image: -webkit-linear-gradient(left, #FF80FF 0%, #FF80FF 100%);
+        background-image: linear-gradient(left, #FF80FF 0%, #FF80FF 100%);
+        color: #FF80FF;
+        padding: 20px 40px 30px 40px;
+    }
+
+        .secondary hgroup.title h1, .secondary hgroup.title h2 {
+            color: black;
+        }
+
+        .secondary p {
             font-size: 1.1em;
         }
 
@@ -323,6 +346,7 @@ aside {
 .label {
     font-weight: 700;
 }
+
 
 /* login page */
 #loginForm {

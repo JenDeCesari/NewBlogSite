@@ -2,33 +2,74 @@
     ViewBag.Title = "About";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
+@section secondary{
+    <hgroup class="title">
+        <h2>@ViewBag.Title</h2>
+        <h3>@ViewBag.Message</h3>
+    </hgroup>
+}
 
-<article>
-    <p>
-        Use this area to provide additional information.
-    </p>
+@section sidebar{
+    
+    Menu = "~Views/Shared/_DefaultMenu.cshtml";
+    @*<h3 class="alert ">Jennifer DeCesari</h3>*@
 
-    <p>
-        Use this area to provide additional information.
-    </p>
-
-    <p>
-        Use this area to provide additional information.
-    </p>
-</article>
-
-<aside>
-    <h3>Aside Title</h3>
-    <p>
-        Use this area to provide additional information.
-    </p>
+         @*<h5 class="muted" >Contact Info</h5><p></p>
+      
+    <div style="white-space: nowrap"><a href="mailto://jenniferdecesari@gmail.com" ><img src="~/Images/EmailIcon.png" alt="Email" />&nbsp;jenniferdecesari@@gmail.com</a></div>  
+    <div><a href="https://twitter.com/JenDeCesari" target="_new"><img src="~/Images/twitter.png" alt="Twitter" />&nbsp;@@JenDeCesari</a> </div> 
+    <hr/>
+    <p></p>
     <ul>
         <li>@Html.ActionLink("Home", "Index", "Home")</li>
         <li>@Html.ActionLink("About", "About", "Home")</li>
         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Resume", "Resume", "Home")</li>
     </ul>
-</aside>
+            *@
+}
+
+<hr />
+<article>
+    <p>
+        Experienced and qualified professional in the software development field with experience in .NET programming, specifically C# in a
+        WinForms environment.  Currently working at <a href="http://www.paratasystems.com" target="_new">Parata Systems</a> in Durham, NC 
+        on the Pharmacy 2000 team.  
+    </p>
+
+    <p>
+        A mom to two wonderful little girls, 7 and 4.  My goal is to be home to cook wonderful dinners every night (I'm learning to love 
+        to cook) and to help my daughters with their homework, piano practice and other activities.  They really are the center of my 
+        world and a big reason why I work is to be able to provide them with everything they need to grow to be happy productive members 
+        of society.
+    </p>
+
+    <p>
+        I'm also the wife to a <a href="http://www.randomphantasmagoria.com/" target="_new">kick ass AMP</a> (Apache, MySQL, PHP) stack 
+        developer, android geek, music buff and all around great dad.  We have alot of fun together and I'm such a lucky gal!
+    </p>
+
+    <p>
+        We want to buy a big lot of land somewhere in Wake County, NC (home to Raleigh/Cary) so we can have our small little house where 
+        my girls can be safe and go to great schools.  I want to have a big vegetable garden and homestead as much as we can because I 
+        care <u><strong><em>ALOT</em></strong></u> about the food that we eat. I'm scared of the current state of affairs with our food 
+        system in the United States.  I want us to be healthy and happy and I know that eating the right types of food is very important 
+        for that goal... so I'll grow it if I have to and hope that we enjoy that too!
+    </p>
+
+    <p>
+        I also work as a <a href="http://DeCesariPhotography.com">professional photographer</a>.  I know, everyone you know is a 
+        professional photographer these days.  But really, I am!  
+    </p>
+
+    <p>
+        I ran a retail photography studio for a few years before we moved to North Carolina and have my Certified Professional Photographer designation
+        which is really hard to get!  I had to pass a comprehensive test, have my images judge by photography masters and have yearly 
+        criteria to pass.  Running your own business is really hard and I prefer to focus on my, more in demand, computer skills as the 
+        main source of my income and my photography business as my artistic outlet. 
+    </p>
+
+    <p>
+        As a result I have pretty rad photoshop skillz!        
+    </p>
+</article>

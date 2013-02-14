@@ -38,6 +38,14 @@
             }
         </div>
         <div class="row-fluid">
+            @if (IsSectionDefined("secondary"))
+            {
+                <div class="hero-unit">
+                    @RenderSection("secondary", required: false)
+                </div>
+            }
+        </div>
+        <div class="row-fluid">
      
 
             @if (IsSectionDefined("sidebar"))
@@ -56,20 +64,9 @@
                 @RenderBody()
             </div>
 
-@*             @if (IsSectionDefined("rightSidebar"))
-            {
-                ViewBag.contentspan = "span3";
-            
-                <div class="span3">
-                    @RenderSection("rightSidebar", required: false)
-                </div>
-            }*@
-
         </div>
 
-
         <!-- Fluid Row 1 -->
-
     </div>
     <!-- Main Container -->
     </div>
