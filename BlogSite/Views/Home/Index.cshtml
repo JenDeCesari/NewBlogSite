@@ -15,22 +15,9 @@
 }
 
 @section sidebar{
-    @*<h3 class="alert ">Jennifer DeCesari</h3>*@
-
-         <h5 class="muted" >Contact Info</h5><p></p>
-      
-    <div style="white-space: nowrap"><a href="mailto://jenniferdecesari@gmail.com" ><img src="~/Images/EmailIcon.png" alt="Email" />&nbsp;jenniferdecesari@@gmail.com</a></div>  
-    <div><a href="https://twitter.com/JenDeCesari" target="_new"><img src="~/Images/twitter.png" alt="Twitter" />&nbsp;@@JenDeCesari</a> </div> 
-    <hr/>
-    <p></p>
-    <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-        <li>@Html.ActionLink("Resume", "Resume", "Home")</li>
-    </ul>
-            
+    @Html.Partial("_Menu")
 }
+
 <h3>February 13th, 2013</h3>
 <p>
     <h5>Learning LINQ and the IEnumerable Interface</h5><p></p>

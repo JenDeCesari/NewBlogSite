@@ -2,7 +2,7 @@
     ViewBag.Title = "About";
 }
 
-@section secondary{
+@section featured{
     <hgroup class="title">
         <h2>@ViewBag.Title</h2>
         <h3>@ViewBag.Message</h3>
@@ -11,22 +11,8 @@
 
 @section sidebar{
     
-    Menu = "~Views/Shared/_DefaultMenu.cshtml";
-    @*<h3 class="alert ">Jennifer DeCesari</h3>*@
+    @Html.Partial("_Menu")
 
-         @*<h5 class="muted" >Contact Info</h5><p></p>
-      
-    <div style="white-space: nowrap"><a href="mailto://jenniferdecesari@gmail.com" ><img src="~/Images/EmailIcon.png" alt="Email" />&nbsp;jenniferdecesari@@gmail.com</a></div>  
-    <div><a href="https://twitter.com/JenDeCesari" target="_new"><img src="~/Images/twitter.png" alt="Twitter" />&nbsp;@@JenDeCesari</a> </div> 
-    <hr/>
-    <p></p>
-    <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-        <li>@Html.ActionLink("Resume", "Resume", "Home")</li>
-    </ul>
-            *@
 }
 
 <hr />
